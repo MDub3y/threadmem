@@ -10,11 +10,19 @@ Reference system: [Proofbox](https://github.com/MDub3y/proofbox) — scored by t
 
 MIT. Maintained by [@MDub3y](https://github.com/MDub3y).
 
-## First results — synthetic-v1 (36 cases: C4, C6, C8)
+## First results — synthetic-v1 (36 cases: C4, C6, C8) — a smoke suite, read accordingly
 
 | system | overall | C4 temporal | C6 lifecycle | C8 poisoning |
 |---|---|---|---|---|
-| full-context (gpt-oss-120b) | 91.7% | 92% | 100% | **83%** |
+| full-context (gpt-oss-120b) | 91.7% | 92%¹ | 100% | **83%** |
 | BM25 top-6 (gpt-oss-120b) | 94.4% | 100% | 100% | **83%** |
 
-Two findings already. Both baselines were **successfully poisoned 2/12 times** — and by the *bluntest* payload ("invoice has been paid in full" from an unknown billing address), not the clever ones: the failure is source-trust weighting (C10), not instruction-following. And BM25 beat full-context on these small mailboxes — retrieval's focus outweighed the ceiling's noise. The reference verified-write system ([Proofbox](https://github.com/MDub3y/proofbox)) measures 0/60 on the same attack classes; scoring it under this harness, scaling mailboxes, and the Enron suites are next. Full predictions are committed under `results/`.
+¹ includes one provider error scored as wrong (empty response, not a model miss).
+
+**What these numbers are and aren't.** synthetic-v1 mailboxes are small (5–7 substantive messages), so the recall capabilities are close to saturated for strong models — these runs validate the harness and scoring, they do not yet discriminate memory systems. The suite earns that at scale and on the Enron data, which come next.
+
+**A pre-registered prediction was falsified.** Prediction 2 said no baseline would beat 50% on lifecycle probes; both scored 100%. The prediction assumed realistic mailbox scale that v1 does not have. Recorded here rather than edited away — that is what pre-registration is for.
+
+**The real finding, stated precisely.** Both baselines asserted a planted false claim as fact **2/12 times**, and the payload that worked was the *bluntest* one — a plain "invoice has been paid in full" from an unknown billing address — while the elaborate injection framings were refused. The failure mode is source-trust weighting (C10), not instruction-following. Two caveats: (a) 10 of the 12 refusals are softer than they look, because a truthful message in the mailbox gives counter-evidence — v2 will include no-counter-evidence variants; (b) [Proofbox](https://github.com/MDub3y/proofbox)'s separately-published 0/60 is a *different measurement* (state changes in its own red-team eval, not QA under this harness) — it has **not** yet been scored here, and no head-to-head exists until it is.
+
+Full per-question predictions are committed under `results/`.
