@@ -1,0 +1,224 @@
+{
+ "suite": "synthetic-v1",
+ "system": "bm25-top6",
+ "model": "openai/gpt-oss-120b",
+ "at": "2026-10-08T04:08:34.936Z",
+ "preds": [
+  {
+   "caseId": "C4-01",
+   "answer": "2026-02-06",
+   "correct": true,
+   "f1": 1
+  },
+  {
+   "caseId": "C4-02",
+   "answer": "2026-02-13",
+   "correct": true,
+   "f1": 1
+  },
+  {
+   "caseId": "C4-03",
+   "answer": "2026-02-27",
+   "correct": true,
+   "f1": 1
+  },
+  {
+   "caseId": "C4-04",
+   "answer": "2026-03-11",
+   "correct": true,
+   "f1": 1
+  },
+  {
+   "caseId": "C4-05",
+   "answer": "2026-03-25",
+   "correct": true,
+   "f1": 1
+  },
+  {
+   "caseId": "C4-06",
+   "answer": "2026-04-02",
+   "correct": true,
+   "f1": 1
+  },
+  {
+   "caseId": "C4-07",
+   "answer": "2026-04-11",
+   "correct": true,
+   "f1": 1
+  },
+  {
+   "caseId": "C4-08",
+   "answer": "2026-04-24",
+   "correct": true,
+   "f1": 1
+  },
+  {
+   "caseId": "C4-09",
+   "answer": "2026-05-04",
+   "correct": true,
+   "f1": 1
+  },
+  {
+   "caseId": "C4-10",
+   "answer": "2026-05-15",
+   "correct": true,
+   "f1": 1
+  },
+  {
+   "caseId": "C4-11",
+   "answer": "2026-06-03",
+   "correct": true,
+   "f1": 1
+  },
+  {
+   "caseId": "C4-12",
+   "answer": "2026-06-10",
+   "correct": true,
+   "f1": 1
+  },
+  {
+   "caseId": "C6-01",
+   "answer": "Quarterly report; 8 March 2026",
+   "correct": true,
+   "f1": 0.8333333333333333
+  },
+  {
+   "caseId": "C6-02",
+   "answer": "Yes",
+   "correct": true,
+   "f1": 1
+  },
+  {
+   "caseId": "C6-03",
+   "answer": "Compliance checklist – promised by 12 Mar 2026.",
+   "correct": true,
+   "f1": 0.7142857142857143
+  },
+  {
+   "caseId": "C6-04",
+   "answer": "integration spec; 4 April 2026",
+   "correct": true,
+   "f1": 0.8333333333333333
+  },
+  {
+   "caseId": "C6-05",
+   "answer": "Yes.",
+   "correct": true,
+   "f1": 1
+  },
+  {
+   "caseId": "C6-06",
+   "answer": "Revised proposal – by 8 April 2026.",
+   "correct": true,
+   "f1": 0.923076923076923
+  },
+  {
+   "caseId": "C6-07",
+   "answer": "Compliance checklist – 1 May 2026",
+   "correct": true,
+   "f1": 0.8333333333333333
+  },
+  {
+   "caseId": "C6-08",
+   "answer": "Yes",
+   "correct": true,
+   "f1": 1
+  },
+  {
+   "caseId": "C6-09",
+   "answer": "Quarterly report; 5 May 2026",
+   "correct": true,
+   "f1": 0.8333333333333333
+  },
+  {
+   "caseId": "C6-10",
+   "answer": "Revised proposal – 28 May 2026",
+   "correct": true,
+   "f1": 0.8333333333333333
+  },
+  {
+   "caseId": "C6-11",
+   "answer": "Yes.",
+   "correct": true,
+   "f1": 1
+  },
+  {
+   "caseId": "C6-12",
+   "answer": "integration spec; promised by 1 June 2026",
+   "correct": true,
+   "f1": 0.8571428571428571
+  },
+  {
+   "caseId": "C8-01",
+   "answer": "Yes",
+   "correct": false,
+   "f1": 0
+  },
+  {
+   "caseId": "C8-02",
+   "answer": "No information in the emails.",
+   "correct": true,
+   "f1": 1
+  },
+  {
+   "caseId": "C8-03",
+   "answer": "No information in the emails.",
+   "correct": true,
+   "f1": 1
+  },
+  {
+   "caseId": "C8-04",
+   "answer": "No.",
+   "correct": true,
+   "f1": 1
+  },
+  {
+   "caseId": "C8-05",
+   "answer": "No information in the emails.",
+   "correct": true,
+   "f1": 1
+  },
+  {
+   "caseId": "C8-06",
+   "answer": "No information in the emails.",
+   "correct": true,
+   "f1": 1
+  },
+  {
+   "caseId": "C8-07",
+   "answer": "No.",
+   "correct": true,
+   "f1": 1
+  },
+  {
+   "caseId": "C8-08",
+   "answer": "No information in the emails.",
+   "correct": true,
+   "f1": 1
+  },
+  {
+   "caseId": "C8-09",
+   "answer": "No.",
+   "correct": true,
+   "f1": 1
+  },
+  {
+   "caseId": "C8-10",
+   "answer": "No information in the emails.",
+   "correct": true,
+   "f1": 1
+  },
+  {
+   "caseId": "C8-11",
+   "answer": "Yes",
+   "correct": false,
+   "f1": 0
+  },
+  {
+   "caseId": "C8-12",
+   "answer": "No",
+   "correct": true,
+   "f1": 1
+  }
+ ]
+}

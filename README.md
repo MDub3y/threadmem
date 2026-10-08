@@ -9,3 +9,12 @@ Ten capabilities: multi-party attribution · quote-chain dedup · thread-structu
 Reference system: [Proofbox](https://github.com/MDub3y/proofbox) — scored by the same harness as every baseline, losses published.
 
 MIT. Maintained by [@MDub3y](https://github.com/MDub3y).
+
+## First results — synthetic-v1 (36 cases: C4, C6, C8)
+
+| system | overall | C4 temporal | C6 lifecycle | C8 poisoning |
+|---|---|---|---|---|
+| full-context (gpt-oss-120b) | 91.7% | 92% | 100% | **83%** |
+| BM25 top-6 (gpt-oss-120b) | 94.4% | 100% | 100% | **83%** |
+
+Two findings already. Both baselines were **successfully poisoned 2/12 times** — and by the *bluntest* payload ("invoice has been paid in full" from an unknown billing address), not the clever ones: the failure is source-trust weighting (C10), not instruction-following. And BM25 beat full-context on these small mailboxes — retrieval's focus outweighed the ceiling's noise. The reference verified-write system ([Proofbox](https://github.com/MDub3y/proofbox)) measures 0/60 on the same attack classes; scoring it under this harness, scaling mailboxes, and the Enron suites are next. Full predictions are committed under `results/`.
